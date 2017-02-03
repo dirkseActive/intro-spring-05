@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.apress.isf.spring.test.MyDocumentsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-02T23:10:41" hostname="dbbvs-LM82" time="0.737">
+<testsuite name="com.apress.isf.spring.test.MyDocumentsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-03T21:17:52" hostname="dbbvs-LM82" time="0.046">
   <properties/>
-  <testcase name="testAll" classname="com.apress.isf.spring.test.MyDocumentsTest" time="0.737"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Feb 02, 2017 6:10:41 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
-INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@26864828: startup date [Thu Feb 02 18:10:41 EST 2017]; root of context hierarchy
-Feb 02, 2017 6:10:41 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+  <testcase name="testAll" classname="com.apress.isf.spring.test.MyDocumentsTest" time="0.046"/>
+  <system-out><![CDATA[Welcome
+to
+My
+Documents
+1.
+Show
+all
+Documents
+2.
+Show
+all
+Document's
+Types
+3.
+Search
+by
+Type
+6.
+Quit
+]]></system-out>
+  <system-err><![CDATA[Feb 03, 2017 4:17:52 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@15babdb5: startup date [Fri Feb 03 16:17:52 EST 2017]; root of context hierarchy
+Feb 03, 2017 4:17:52 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
 INFO: Loading XML bean definitions from class path resource [META-INF/spring/mydocuments-context.xml]
 ]]></system-err>
 </testsuite>

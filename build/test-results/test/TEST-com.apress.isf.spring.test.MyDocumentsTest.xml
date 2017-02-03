@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.apress.isf.spring.test.MyDocumentsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-03T21:35:31" hostname="dbbvs-LM82" time="0.042">
+  <properties/>
+  <testcase name="testAll" classname="com.apress.isf.spring.test.MyDocumentsTest" time="0.042"/>
+  <system-out><![CDATA[Welcome
+to
+My
+Documents
+1.
+Show
+all
+Documents
+2.
+Show
+all
+Document's
+Types
+3.
+Search
+by
+Type
+6.
+Quit
+]]></system-out>
+  <system-err><![CDATA[Feb 03, 2017 4:35:31 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@64342210: startup date [Fri Feb 03 16:35:31 EST 2017]; root of context hierarchy
+Feb 03, 2017 4:35:31 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [META-INF/spring/mydocuments-context.xml]
+]]></system-err>
+</testsuite>

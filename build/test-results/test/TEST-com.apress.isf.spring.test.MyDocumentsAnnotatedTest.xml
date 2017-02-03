@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.apress.isf.spring.test.MyDocumentsAnnotatedTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-03T21:35:30" hostname="dbbvs-LM82" time="0.467">
+  <properties/>
+  <testcase name="testWithAnnotationsAll" classname="com.apress.isf.spring.test.MyDocumentsAnnotatedTest" time="0.467"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Feb 03, 2017 4:35:30 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20634d4d: startup date [Fri Feb 03 16:35:30 EST 2017]; root of context hierarchy
+Feb 03, 2017 4:35:30 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [META-INF/spring/mydocuments-annotations-context.xml]
+]]></system-err>
+</testsuite>

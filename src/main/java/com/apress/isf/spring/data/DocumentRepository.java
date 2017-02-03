@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import com.apress.isf.java.model.Document;
 
 /**
- * @author Felipe Gutierrez
+ * @author bvs
  *
  */
 public class DocumentRepository implements DocumentDAO {
