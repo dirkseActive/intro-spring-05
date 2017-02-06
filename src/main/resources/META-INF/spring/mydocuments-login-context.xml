@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
-
-<context:component-scan base-package="com.apress.isf.spring.views"/>
-
-  <bean id="engine" class="com.apress.isf.spring.service.SearchEngineService">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+<bean id="environmentProperties"
+class ="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="location" value="classpath:META-INF/data/env_dev.properties"/>
+</bean>
+<bean id="login" class="com.apress.isf.spring.service.LoginService">
+	<property name="username" value="${user.email}"/>
+	<property name="password" value="${user.password}" />
+</bean>
+<bean id="engine" class="com.apress.isf.spring.service.SearchEngineService">
       <property name="documentDAO" ref="documentDAO"/>
   </bean>
     
