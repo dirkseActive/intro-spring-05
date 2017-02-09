@@ -16,6 +16,7 @@
 	 compile 'org.springframework:spring-context:4.0.5.RELEASE'
 	 compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.21'
 	 testCompile 'junit:junit:4.11'
+	 testCompile 'org.springframework:spring-test:4.0.5.RELEASE'
  }
 
  test {
