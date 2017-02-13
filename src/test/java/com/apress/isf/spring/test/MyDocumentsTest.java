@@ -21,7 +21,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
+import org.springframework.test.context.web.ServletTestExecutionListener;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.apress.isf.java.model.Document;
 import com.apress.isf.java.model.Type;
@@ -36,8 +40,11 @@ import com.apress.isf.java.service.SearchEngine;
  *
  */
 
+@WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:META-INF/spring/mydocuments-context.xml")
+@TestExecutionListeners(listeners = {TransactionalTestExecutionListener.class, ServletTestExecutionListener.class})
+
 public class MyDocumentsTest {
 	private static final Logger log = LoggerFactory.getLogger(MyDocumentsTest.class);
 	

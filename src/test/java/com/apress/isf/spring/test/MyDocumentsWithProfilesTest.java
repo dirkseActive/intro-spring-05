@@ -13,7 +13,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
+import org.springframework.test.context.web.ServletTestExecutionListener;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.apress.isf.java.model.Document;
@@ -27,7 +30,8 @@ import com.apress.isf.java.service.SearchEngine;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration 
 @ContextConfiguration("classpath:META-INF/spring/mydocuments-profiles-context.xml")
-@ActiveProfiles("dev")
+@ActiveProfiles("qa")
+@TestExecutionListeners(listeners = {ServletTestExecutionListener.class, TransactionalTestExecutionListener.class})
 public class MyDocumentsWithProfilesTest {
 	private static final Logger log = LoggerFactory.getLogger(MyDocumentsWithProfilesTest.class);
 	
