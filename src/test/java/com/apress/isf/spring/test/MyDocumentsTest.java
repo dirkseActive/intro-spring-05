@@ -7,24 +7,27 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-import java.util.Scanner;
+//import java.io.IOException;
+//import java.io.InputStream;
+//import java.util.Scanner;
 
-import org.junit.Before;
+import java.util.List;
+
+//import org.junit.Before;
+//import org.springframework.context.support.ClassPathXmlApplicationContext;
+//import org.springframework.core.io.Resource;
+//import org.springframework.context.annotation.Configuration;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestExecutionListeners;
+// import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
-import org.springframework.test.context.web.ServletTestExecutionListener;
+// import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
+// import org.springframework.test.context.web.ServletTestExecutionListener;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.apress.isf.java.model.Document;
@@ -43,8 +46,7 @@ import com.apress.isf.java.service.SearchEngine;
 @WebAppConfiguration
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:META-INF/spring/mydocuments-context.xml")
-@TestExecutionListeners(listeners = {TransactionalTestExecutionListener.class, ServletTestExecutionListener.class})
-
+//@TestExecutionListeners(listeners = {TransactionalTestExecutionListener.class, ServletTestExecutionListener.class})
 public class MyDocumentsTest {
 	private static final Logger log = LoggerFactory.getLogger(MyDocumentsTest.class);
 	
@@ -76,6 +78,7 @@ public class MyDocumentsTest {
 		assertEquals(webType.getDesc(),documents.get(0).getType().getDesc());
 		assertEquals(webType.getExtension(),documents.get(0).getType().getExtension());
 
+		
 		documents = engine.listAll();
 		assertNotNull(documents);
 		assertTrue(documents.size() == 4);

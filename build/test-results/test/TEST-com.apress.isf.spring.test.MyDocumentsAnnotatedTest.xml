@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.apress.isf.spring.test.MyDocumentsAnnotatedTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-13T16:10:19" hostname="dbbvs-LM82" time="0.577">
+<testsuite name="com.apress.isf.spring.test.MyDocumentsAnnotatedTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-14T17:15:27" hostname="dbbvs-LM82" time="0.747">
   <properties/>
-  <testcase name="testWithAnnotationsAll" classname="com.apress.isf.spring.test.MyDocumentsAnnotatedTest" time="0.577"/>
+  <testcase name="testWithAnnotationsAll" classname="com.apress.isf.spring.test.MyDocumentsAnnotatedTest" time="0.747"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Feb 13, 2017 11:10:19 AM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
-INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@20634d4d: startup date [Mon Feb 13 11:10:19 EST 2017]; root of context hierarchy
-Feb 13, 2017 11:10:19 AM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+  <system-err><![CDATA[Feb 14, 2017 12:15:27 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1c5c9863: startup date [Tue Feb 14 12:15:27 EST 2017]; root of context hierarchy
+Feb 14, 2017 12:15:27 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
 INFO: Loading XML bean definitions from class path resource [META-INF/spring/mydocuments-annotations-context.xml]
 ]]></system-err>
 </testsuite>

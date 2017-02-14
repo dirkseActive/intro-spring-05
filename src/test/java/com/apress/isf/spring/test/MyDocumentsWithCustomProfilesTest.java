@@ -11,37 +11,41 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.annotation.IfProfileValue;
+import org.springframework.test.annotation.ProfileValueSourceConfiguration;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
+import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 import org.springframework.test.context.web.ServletTestExecutionListener;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.apress.isf.java.model.Document;
 import com.apress.isf.java.model.Type;
 import com.apress.isf.java.service.SearchEngine;
+import com.apress.isf.spring.test.profile.CustomProfile;
 
 /*
- * dirkseActive 2/13/2017
+ * dirkseActive 2/14/2017 Chap 7
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@WebAppConfiguration 
-@ContextConfiguration("classpath:META-INF/spring/mydocuments-profiles-context.xml")
-@ActiveProfiles("dev")
-@TestExecutionListeners(listeners = {ServletTestExecutionListener.class, TransactionalTestExecutionListener.class})
-public class MyDocumentsWithProfilesTest {
-	private static final Logger log = LoggerFactory.getLogger(MyDocumentsWithProfilesTest.class);
+@ContextConfiguration("classpath:META-INF/spring/mydocuments-custom-profiles-context.xml")
+@ProfileValueSourceConfiguration(CustomProfile.class)
+@TestExecutionListeners(listeners = {ServletTestExecutionListener.class, TransactionalTestExecutionListener.class,DependencyInjectionTestExecutionListener.class,
+	    DirtiesContextTestExecutionListener.class})
+public class MyDocumentsWithCustomProfilesTest {
+	private static final Logger log = LoggerFactory.getLogger(MyDocumentsWithCustomProfilesTest.class);
 	
 	@Autowired
 	private SearchEngine engine;
 	@Autowired
 	private Type webType;
 	
+	@IfProfileValue(name = "environment", values = "dev")
 	@Test
-	public void testUsingSpringTestWithProfiles(){
+	public void testUsingSpringTestWithCustomPriflesX(){
 		try{
 			log.debug("Using Spring Test fixtures:");
 			
@@ -58,6 +62,17 @@ public class MyDocumentsWithProfilesTest {
 		}catch(Exception e){
 			log.error(e.getMessage());
 		}
+		}
+	
+	@IfProfileValue(name = "os.name", values = "Unix")
+	@Test
+	public void testUsingSpringTestWithCustomPrfilesY(){
+		try{
+			log.debug("Using Spring Test fixtures on Unix:");
+			// More testing
+		}catch(Exception ex){
+			log.error(ex.getMessage());
+		}
 	}
-
 }
+

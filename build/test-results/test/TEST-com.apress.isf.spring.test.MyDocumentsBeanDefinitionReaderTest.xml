@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.apress.isf.spring.test.MyDocumentsBeanDefinitionReaderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-13T16:10:20" hostname="dbbvs-LM82" time="1.036">
+<testsuite name="com.apress.isf.spring.test.MyDocumentsBeanDefinitionReaderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-14T17:15:28" hostname="dbbvs-LM82" time="0.836">
   <properties/>
-  <testcase name="testWithGroovyAll" classname="com.apress.isf.spring.test.MyDocumentsBeanDefinitionReaderTest" time="1.036"/>
+  <testcase name="testWithGroovyAll" classname="com.apress.isf.spring.test.MyDocumentsBeanDefinitionReaderTest" time="0.836"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Feb 13, 2017 11:10:21 AM org.springframework.context.support.GenericGroovyApplicationContext prepareRefresh
-INFO: Refreshing org.springframework.context.support.GenericGroovyApplicationContext@6c0ff27d: startup date [Mon Feb 13 11:10:21 EST 2017]; root of context hierarchy
+  <system-err><![CDATA[Feb 14, 2017 12:15:29 PM org.springframework.context.support.GenericGroovyApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericGroovyApplicationContext@71f57ef7: startup date [Tue Feb 14 12:15:29 EST 2017]; root of context hierarchy
 ]]></system-err>
 </testsuite>
