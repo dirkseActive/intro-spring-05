@@ -34,6 +34,7 @@ public class DocumentRepository implements DocumentDAO {
 		if(log.isDebugEnabled())
 			log.debug("End <getAll> Result:" + result);
 		return result;
+		
 	}
 
 }
