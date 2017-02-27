@@ -20,6 +20,7 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 import org.springframework.test.context.support.DirtiesContextTestExecutionListener;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 import org.springframework.test.context.web.ServletTestExecutionListener;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.apress.isf.java.model.Document;
 import com.apress.isf.java.model.Type;
@@ -31,6 +32,7 @@ import com.apress.isf.spring.test.profile.CustomProfile;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
+@WebAppConfiguration 
 @ContextConfiguration("classpath:META-INF/spring/mydocuments-custom-profiles-context.xml")
 @ProfileValueSourceConfiguration(CustomProfile.class)
 @TestExecutionListeners(listeners = {ServletTestExecutionListener.class, TransactionalTestExecutionListener.class,DependencyInjectionTestExecutionListener.class,

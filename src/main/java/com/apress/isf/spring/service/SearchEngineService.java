@@ -25,43 +25,31 @@ public class SearchEngineService implements SearchEngine {
 
 	
 	public SearchEngineService(){
-		if(log.isDebugEnabled())
-			log.debug("SearchEngineService created: " + this);
 	}
 	
 	public DocumentDAO getDocumentDAO() {
 		return documentDAO;
 	}
-
+	
 	public void setDocumentDAO(DocumentDAO documentDAO) {
-		if(log.isDebugEnabled())
-			log.debug("Document DAO set: " + documentDAO);
-		
-		this.documentDAO = documentDAO;
 	}
 
 	public List<Document> findByType(Type documentType) {
-		if(log.isDebugEnabled())
-			log.debug("Start <findByType> Params: " + documentType);
-		
 		List<Document>  result = new ArrayList<Document>();
 		for(Document doc : listAll()){
 			if(doc.getType().getName().equals(documentType.getName()))
 				result.add(doc);
 		}
-		
-		if(log.isDebugEnabled())
-			log.debug("End <findByType> Result: " + result);
 		return result;
 	}
 	
 	public List<Document> listAll() {
-		if(log.isDebugEnabled())
-			log.debug("Start <listAll> Params: ");
 		List<Document> result = Arrays.asList(documentDAO.getAll());
-		if(log.isDebugEnabled())
-			log.debug("End <listAll> Result: " + result);
 		return result;
+	}
+	
+	public List<Document> findByLocation(String location){
+		throw new UnsupportedOperationException("findByLocation not yet implemented.");
 	}
 
 }
