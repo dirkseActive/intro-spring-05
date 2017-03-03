@@ -62,4 +62,10 @@ public class AnnotatedSearchEngine implements SearchEngine {
 			log.debug("End <listAll> Params: " + result);
 		return result;
 	}
+
+	@Override
+	public List<Document> findByLocation(String location) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

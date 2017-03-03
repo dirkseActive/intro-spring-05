@@ -3,31 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--  -->
-  <!-- AOP  -->
-  <bean id="beforeLogging" class="com.apress.isf.spring.aop.BeforeLoggingModule" />
-  <bean id="afterLogging" class="com.apress.isf.spring.aop.AfterLoggingModule" />
-  <bean id="aroundLogging" class="com.apress.isf.spring.aop.AroundLoggingModule" />
-  <bean id="throwsLogging" class="com.apress.isf.spring.aop.ThrowsLoggingModule" />
-  <bean id="caching" class="com.apress.isf.spring.aop.CachingModule" />
-  
-  <!-- AOP Proxy -->
-  <bean id="engineProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
-    <property name="proxyTargetClass" value="true"/>
-    <property name="target" ref="engine" />
-    <property name="interceptorNames">
-      <list>
-        <value>caching</value>
-        <!-- 
-        <value>beforeLogging</value> 
-        <value>afterLogging</value>
-        <value>aroundLogging</value>
-        <value>throwsLogging</value>
-        <value>caching</value>
-        -->
-      </list>
-    </property>
-  </bean>
+
 
   
   <bean id="engine" class="com.apress.isf.spring.service.SearchEngineService">
